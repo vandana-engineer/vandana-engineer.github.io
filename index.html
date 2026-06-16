@@ -1,165 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vandana Charabudla | Data Engineer Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vandana Charabudla | Data Engineer</title>
+
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b111c;
+  color: #f8fafc;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 7%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11, 17, 28, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
   color: #e5e7eb;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 14px;
 }
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px;
-}
+
 .hero {
-  padding: 50px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+  background:
+    radial-gradient(circle at center, rgba(56,189,248,0.18), transparent 30%),
+    radial-gradient(circle at 60% 45%, rgba(147,51,234,0.25), transparent 25%),
+    #0b111c;
 }
-h1 {
-  font-size: 42px;
+
+.hero h1 {
+  font-size: clamp(48px, 8vw, 96px);
+  letter-spacing: 4px;
+  font-weight: 800;
+}
+
+.hero p {
+  margin-top: 18px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #cbd5e1;
+}
+
+.hero .summary {
+  max-width: 720px;
+  margin: 28px auto;
+  line-height: 1.8;
+  letter-spacing: 0;
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 13px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.buttons a.secondary {
+  background: transparent;
+  border: 1px solid #38bdf8;
+}
+
+section {
+  padding: 70px 7%;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.metric, .card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.metric h3 {
+  font-size: 36px;
+  color: #38bdf8;
+}
+
+.metric p {
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
   color: white;
 }
-h2 {
-  color: #38bdf8;
+
+.card p, li {
+  color: #cbd5e1;
+  line-height: 1.7;
 }
-.card {
-  background: #111827;
-  padding: 22px;
-  margin: 15px 0;
-  border-radius: 14px;
-  border: 1px solid #1f2937;
+
+.card ul {
+  padding-left: 20px;
 }
-.metrics, .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-.metric {
+
+.tags span {
+  display: inline-block;
   background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-}
-.metric h3 {
-  font-size: 30px;
   color: #38bdf8;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 6px 5px 0 0;
+  font-size: 13px;
 }
-a {
+
+.project-link {
+  display: inline-block;
+  margin-top: 16px;
   color: #38bdf8;
   text-decoration: none;
   font-weight: bold;
 }
-button {
-  padding: 12px 22px;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  margin: 8px 8px 8px 0;
-  cursor: pointer;
+
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #94a3b8;
+  border-top: 1px solid #1f2937;
 }
-</style>
-</head>
 
-<body>
-<div class="container">
-
-<section class="hero">
-<h1>Vandana Charabudla</h1>
-<h2>Data Engineer | Python Developer | AWS | PySpark</h2>
-<p>Building scalable ETL pipelines, cloud data platforms, and data-driven solutions using Python, SQL, AWS, PySpark, Kafka, Airflow, and Snowflake.</p>
-
-<a href="resume.pdf" target="_blank"><button>Download Resume</button></a>
-<a href="https://github.com/vandana-engineer" target="_blank"><button>GitHub</button></a>
-<a href="https://www.linkedin.com/in/vandana-charabudla-46a33a376/" target="_blank"><button>LinkedIn</button></a>
-</section>
-
-<section class="metrics">
-<div class="metric"><h3>4+</h3><p>Years Experience</p></div>
-<div class="metric"><h3>3M+</h3><p>Records Processed Daily</p></div>
-<div class="metric"><h3>35%</h3><p>Performance Improvement</p></div>
-<div class="metric"><h3>5+</h3><p>Portfolio Projects</p></div>
-</section>
-
-<div class="card">
-<h2>About Me</h2>
-<p>Master's in Computer Science with experience in data engineering, Python development, ETL workflows, cloud platforms, and analytics. Skilled in building data pipelines, automating workflows, and designing scalable data solutions for business reporting and decision-making.</p>
-</div>
-
-<div class="card">
-<h2>Technical Skills</h2>
-<p><b>Languages:</b> Python, SQL</p>
-<p><b>Big Data:</b> PySpark, Kafka, Airflow</p>
-<p><b>Cloud:</b> AWS, Azure</p>
-<p><b>Databases:</b> PostgreSQL, MySQL, Snowflake</p>
-<p><b>Tools:</b> Docker, Git, GitHub, Pandas</p>
-</div>
-
-<div class="card">
-<h2>Experience</h2>
-
-<h3>Optum — Data Engineer</h3>
-<ul>
-<li>Built ETL pipelines processing 3M+ healthcare records daily.</li>
-<li>Improved pipeline performance by 35% using PySpark optimizations.</li>
-<li>Developed AWS-based workflows and automated data validation.</li>
-</ul>
-
-<h3>Novartis — Data Engineer</h3>
-<ul>
-<li>Built scalable data integration pipelines for enterprise analytics.</li>
-<li>Improved data quality and supported SQL-based reporting workflows.</li>
-<li>Maintained 99%+ data accuracy across large datasets.</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Featured Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3><a href="https://github.com/vandana-engineer/real-time-etl-pipeline" target="_blank">Real-Time ETL Pipeline</a></h3>
-<p>Python, Kafka, PySpark, AWS</p>
-<p>Built a real-time data pipeline for streaming ingestion and transformation.</p>
-</div>
-
-<div class="card">
-<h3><a href="https://github.com/vandana-engineer/airflow-data-pipeline" target="_blank">Airflow Data Pipeline</a></h3>
-<p>Apache Airflow, Python, AWS</p>
-<p>Automated ETL workflow scheduling and orchestration.</p>
-</div>
-
-<div class="card">
-<h3><a href="https://github.com/vandana-engineer/aws-data-lake-project" target="_blank">AWS Data Lake Project</a></h3>
-<p>S3, Glue, Athena, Python</p>
-<p>Designed a data lake workflow for cloud analytics.</p>
-</div>
-
-<div class="card">
-<h3><a href="https://github.com/vandana-engineer/predictive-maintenance-iot" target="_blank">Predictive Maintenance IoT</a></h3>
-<p>FastAPI, PySpark, AWS Kinesis</p>
-<p>Built an IoT predictive maintenance system for machine failure detection.</p>
-</div>
-
-<div class="card">
-<h3><a href="https://github.com/vandana-engineer/brain-tumor-classification" target="_blank">Brain Tumor Classification</a></h3>
-<p>TensorFlow, OpenCV, Flask</p>
-<p>Developed a deep learning project for MRI brain tumor detection.</p>
-</div>
-
-</div>
-</div>
-
-<div class="card">
-<h2>Contact</h2>
-<p><a href="mailto:vandana.charabudla2@gmail.com">vandana.charabudla2@gmail.com</a></p>
-<p><a href="https://github.com/vandana-engineer" target="_blank">GitHub Profile</a></p>
-<p><a href="https://www.linkedin.com/in/vandana-charabudla-46a33a376/" target="_blank">LinkedIn Profile</a></p>
-</div>
-
-</div>
-</body>
-</html>
+@media (max-width: 700
