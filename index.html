@@ -1,266 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vandana | Software Engineer</title>
-  <style>
-    /* CSS Variables for easy theming */
-    :root {
-      --bg-color: #0a0a0a;
-      --text-main: #f4f4f5;
-      --text-muted: #a1a1aa;
-      --accent: #06b6d4; /* Cyan accent */
-      --card-bg: #171717;
-    }
+<title>Vandana Charabudla | Data Engineer Portfolio</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+.hero {
+    padding: 50px 0;
+}
 
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      background: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
+h1 {
+    font-size: 42px;
+    color: #ffffff;
+}
 
-    nav .logo {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--accent);
-      text-decoration: none;
-    }
+h2 {
+    color: #38bdf8;
+}
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
+.card {
+    background: #111827;
+    padding: 22px;
+    margin: 15px 0;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+}
 
-    nav a {
-      color: var(--text-main);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
 
-    nav a:hover {
-      color: var(--accent);
-    }
+.metric {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
 
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 10%;
-    }
+.metric h3 {
+    font-size: 28px;
+    color: #38bdf8;
+}
 
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
-    }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
 
-    .hero h2 {
-      font-size: 2rem;
-      color: var(--text-muted);
-      margin-bottom: 30px;
-      font-weight: 400;
-    }
+a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    /* Typing Effect Cursor */
-    .typewrite {
-      color: var(--accent);
-      border-right: 3px solid var(--accent);
-      padding-right: 5px;
-      animation: blink 0.8s infinite;
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      width: max-content;
-    }
-
-    .btn:hover {
-      background: var(--accent);
-      color: var(--bg-color);
-      box-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
-    }
-
-    /* Projects Section */
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    .projects {
-      padding: 100px 10%;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      padding: 30px;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid #262626;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
-      border-color: var(--accent);
-    }
-
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .tags span {
-      background: rgba(6, 182, 212, 0.1);
-      color: var(--accent);
-      padding: 5px 10px;
-      font-size: 0.8rem;
-      border-radius: 20px;
-    }
-  </style>
+button {
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+}
+</style>
 </head>
+
 <body>
+<div class="container">
 
-  <nav>
-    <a href="#" class="logo">Vandana.</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<section class="hero">
+<h1>Vandana Charabudla</h1>
+<h2>Data Engineer | Python Developer | AWS | PySpark</h2>
+<p>
+Building scalable ETL pipelines, cloud data platforms, and data-driven solutions using
+Python, SQL, AWS, PySpark, Kafka, Airflow, and Snowflake.
+</p>
 
-  <section class="hero" id="about">
-    <p style="color: var(--accent); font-family: monospace; font-size: 1.2rem; margin-bottom: 10px;">Hi, my name is</p>
-    <h1>Vandana.</h1>
-    <h2>I build <span class="typewrite" data-words='["scalable web applications.", "robust backend systems.", "beautiful user interfaces."]'></span></h2>
-    <p style="max-width: 600px; color: var(--text-muted); margin-bottom: 40px;">
-      I'm a Software Engineer specializing in creating exceptional digital experiences. I focus on writing clean, elegant, and efficient code.
-    </p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
+<a href="resume.pdf" target="_blank"><button>Download Resume</button></a>
+<a href="https://github.com/vandana-engineer"><button>GitHub</button></a>
+<a href="https://www.linkedin.com/in/vandana-charabudla-46a33a376/"><button>LinkedIn</button></a>
+</section>
 
-  <section class="projects" id="projects">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="grid">
-      <!-- Project 1 -->
-      <div class="card">
-        <h3>E-Commerce Platform</h3>
-        <p style="color: var(--text-muted);">A full-stack application featuring user authentication, payment integration, and a dynamic product catalog.</p>
-        <div class="tags">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>MongoDB</span>
-        </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="card">
-        <h3>API Rate Limiter</h3>
-        <p style="color: var(--text-muted);">A high-performance middleware service designed to protect microservices from traffic spikes.</p>
-        <div class="tags">
-          <span>Python</span>
-          <span>Redis</span>
-          <span>Docker</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="metrics">
+<div class="metric">
+<h3>4+</h3>
+<p>Years Experience</p>
+</div>
 
-  <script>
-    // Typing Effect Logic
-    class TypeWriter {
-      constructor(el, words, wait = 3000) {
-        this.el = el;
-        this.words = words;
-        this.txt = '';
-        this.wordIndex = 0;
-        this.wait = parseInt(wait, 10);
-        this.type();
-        this.isDeleting = false;
-      }
+<div class="metric">
+<h3>3M+</h3>
+<p>Records Processed Daily</p>
+</div>
 
-      type() {
-        const current = this.wordIndex % this.words.length;
-        const fullTxt = this.words[current];
+<div class="metric">
+<h3>35%</h3>
+<p>Performance Improvement</p>
+</div>
 
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+<div class="metric">
+<h3>5+</h3>
+<p>Portfolio Projects</p>
+</div>
+</section>
 
-        this.el.innerHTML = this.txt;
+<div class="card">
+<h2>About Me</h2>
+<p>
+Master's in Computer Science with experience in data engineering, Python development,
+ETL workflows, cloud platforms, and analytics. Skilled in building data pipelines,
+automating workflows, and designing scalable data solutions for business reporting
+and decision-making.
+</p>
+</div>
 
-        let typeSpeed = 100;
-        if (this.isDeleting) typeSpeed /= 2;
+<div class="card">
+<h2>Technical Skills</h2>
+<p><b>Languages:</b> Python, SQL</p>
+<p><b>Big Data:</b> PySpark, Kafka, Airflow</p>
+<p><b>Cloud:</b> AWS, Azure</p>
+<p><b>Databases:</b> PostgreSQL, MySQL, Snowflake</p>
+<p><b>Tools:</b> Docker, Git, GitHub, Pandas</p>
+</div>
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-          typeSpeed = this.wait;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-          this.isDeleting = false;
-          this.wordIndex++;
-          typeSpeed = 500;
-        }
-        setTimeout(() => this.type(), typeSpeed);
-      }
-    }
+<div class="card">
+<h2>Experience</h2>
 
-    document.addEventListener('DOMContentLoaded', init);
+<h3>Optum — Data Engineer</h3>
+<ul>
+<li>Built ETL pipelines processing 3M+ healthcare records daily.</li>
+<li>Improved pipeline performance by 35% using PySpark optimizations.</li>
+<li>Developed AWS-based workflows and automated data validation.</li>
+</ul>
 
-    function init() {
-      const txtElement = document.querySelector('.typewrite');
-      const words = JSON.parse(txtElement.getAttribute('data-words'));
-      const wait = 2000;
-      new TypeWriter(txtElement, words, wait);
-    }
-  </script>
+<h3>Novartis — Data Engineer</h3>
+<ul>
+<li>Built scalable data integration pipelines for enterprise analytics.</li>
+<li>Improved data quality and supported SQL-based reporting workflows.</li>
+<li>Maintained 99%+ data accuracy across large datasets.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Featured Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3><a href="https://github.com/vandana-engineer/real-time-etl-pipeline">Real-Time ETL Pipeline</a></h3>
+<p>Python, Kafka, PySpark, AWS</p>
+<p>Built a real-time data pipeline for streaming ingestion and transformation.</p>
+</div>
+
+<div class="card">
+<h3><a href="https://github.com/vandana-engineer/airflow-data-pipeline">Airflow Data Pipeline</a></h3>
+<p>Apache Airflow, Python, AWS</p>
+<p>Automated ETL workflow scheduling and orchestration.</p>
+</div>
+
+<div class="card">
+<h3><a href="https://github.com/vandana-engineer/aws-data-lake-project">AWS Data Lake Project</a></h3>
+<p>S3, Glue, Athena, Python</p>
+<p>Designed a data lake workflow for cloud analytics.</p>
+</div>
+
+<div class="card">
+<h3><a href="https://github.com/vandana-engineer/predictive-maintenance-iot">Predictive Maintenance IoT</a></h3>
+<p>FastAPI, PySpark, AWS Kinesis</p>
+<p>Built an IoT predictive maintenance system for machine failure detection.</p>
+</div>
+
+<div class="card">
+<h3><a href="https://github.com/vandana-engineer/brain-tumor-classification">Brain Tumor Classification</a></h3>
+<p>TensorFlow, OpenCV, Flask</p>
+<p>Developed a deep learning project for MRI brain tumor detection.</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p><a href="mailto:vandana.charabudla2@gmail.com">vandana.charabudla2@gmail.com</a></p>
+<p><a href="https://github.com/vandana-engineer">GitHub Profile</a></p>
+<p><a href="https://www.linkedin.com/in/vandana-charabudla-46a33a376/">LinkedIn Profile</a></p>
+</div>
+
+</div>
 </body>
 </html>
