@@ -18,9 +18,10 @@ body::before{
   position:fixed;
   inset:0;
   background:
-    radial-gradient(circle at 20% 20%,rgba(94,234,212,.18),transparent 25%),
-    radial-gradient(circle at 80% 30%,rgba(96,165,250,.16),transparent 25%),
-    radial-gradient(circle at 50% 80%,rgba(129,140,248,.14),transparent 30%);
+    radial-gradient(circle at 25% 20%,rgba(125,211,252,.18),transparent 28%),
+    radial-gradient(circle at 75% 30%,rgba(148,163,184,.16),transparent 30%),
+    radial-gradient(circle at 50% 80%,rgba(94,234,212,.13),transparent 35%);
+  filter:blur(10px);
   z-index:-1;
 }
 nav{
@@ -102,12 +103,22 @@ section{padding:80px 7%}
   text-shadow:0 0 18px rgba(255,255,255,.18);
 }
 .glass{
-  background:rgba(255,255,255,.075);
-  border:1px solid rgba(255,255,255,.14);
-  backdrop-filter:blur(22px);
-  border-radius:28px;
-  padding:30px;
-  box-shadow:0 30px 80px rgba(0,0,0,.28);
+  background:rgba(180,210,210,0.16);
+  border:1px solid rgba(255,255,255,0.18);
+  backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);
+  border-radius:30px;
+  padding:32px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+  .glass:hover{
+  transform:translateY(-6px);
+  border-color:rgba(125,211,252,.45);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 35px rgba(125,211,252,.15);
 }
 .grid{
   display:grid;
